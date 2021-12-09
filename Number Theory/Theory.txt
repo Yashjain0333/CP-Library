@@ -1,0 +1,43 @@
+1.	Euclid's algorithm
+
+	The idea behind this algorithm is GCD(A,B) = GCD(B,A%B) . It will recurse until A%B = 0.
+
+	int GCD(int A, int B) {
+	    if(B==0)
+	        return A;
+	    else
+	        return GCD(B, A % B);
+	}
+
+2.  Extended Euclidean algorithm
+	
+	Ax + By = GCD(A,B)
+	Now, GCD(A,B) = GCD(B,A%B)
+
+	Hence, Bx1 + (A%B)y1 = GCD(A,B)
+
+	Also, A%B = A-B*(floor(A/B))
+
+	=> Bx1 + (A-B*(floor(A/B)))y1 = GCD(A,B)
+
+	from this we get:
+
+	i.  x = y1
+	ii. y = x1-(floor(A/B))y1
+
+	int d, x, y;
+	void extendedEuclid(int A, int B) {
+	    if(B == 0) {
+	        d = A;
+	        x = 1;
+	        y = 0;
+	    }
+	    else {
+	        extendedEuclid(B, A%B);
+	        int temp = x;
+	        x = y;
+	        y = temp - (A/B)*y;
+	    }
+	}
+
+3. There are approximately (N!)/e derangements for N numbers. Hence they are very common and could be found in a constant time if we keep shuffling the array.

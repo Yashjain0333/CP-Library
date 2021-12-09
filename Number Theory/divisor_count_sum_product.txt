@@ -1,0 +1,15 @@
+Prime Numbers:
+http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php
+
+Divisor count
+O(n^(1/3))
+https://www.geeksforgeeks.org/count-divisors-n-on13/
+
+Divisor sum
+
+In general, if you have the prime factorization of the number n, then to calculate the sum of its divisors, you take each different prime factor and add together all its powers up to the one that appears in the prime factorization, and then multiply all these sums together!
+
+
+Divisor Product
+
+https://www.geeksforgeeks.org/product-of-divisors-of-a-number-from-a-given-list-of-its-prime-factors/

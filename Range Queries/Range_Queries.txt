@@ -1,0 +1,13 @@
+Range Queries:
+
+1. Prefix Sum Technique:
+
+	i.   Overall time complexity = O(n+q), Memory required is O(n).	
+	ii.  The operation should be invertable. That is, operations like: sum, xor.
+	iii. This allows for static range queries only.
+
+2. Sparse Tables:
+
+	i.   This also gives O(1) queries and has a build time of O(NlogN).
+	ii.  Can be used for min/max/gcd/bitwise and/ bitwise or as well.
+	iii. This also allows for static range queries only.

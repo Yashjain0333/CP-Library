@@ -1,0 +1,135 @@
+am-1 ≅ 1 (mod m)
+a-1 ≅ a m-2 (mod m)
+
+
+
+According the Fermat's little
+a(M - 1) = 1 (mod M) if M is a prime.
+
+A^BC
+
+So if we rewrite BC as x*(M-1) + y, then the
+task of computing ABC becomes A^(x*(M-1) + y)
+which can be written as A^(x*(M-1))*Ay.
+From Fermat's little theorem, we know Ax*(M-1) = 1.
+So task of computing ABC reduces to computing A^y
+
+What is the value of y?
+From BC = x * (M - 1) + y,
+y can be written as BC % (M-1)
+
+We can easily use the above theorem such that we can get
+A ^ (B ^ C) % M = (A ^ y ) %  M
+
+Now we only need to find two things as:-
+1. y = (B ^ C) % (M - 1)
+2. Ans = (A ^ y) % M
+
+
+
+
+
+--------------------------------------------
+N is the given number
+N = X*Y
+
+Basically to reduce the time complexity, we are doing this.
+Factors of X <= cbrt(N) -> Fact
+Then Y has atmost 2 prime factors! -> Claim
+
+p1*p2*p3 = Y
+p1,p2,p3 > cbrt(N)
+p1*p2*p3 > N, But this is a contradiction
+
+ans = 5
+N = p1^x * p2^y * p3^z
+Divisor: Has some powers of prime factors of N
+
+If Y is ans *= 1
+
+If Y is prime => (exponent of y .i.e. 1 + 1) = 2
+
+If Y is a square of prime => (exponent of sqrt(y) .i.e. 2+1) = 3
+
+If Y is composite => (exponent of p1 +1)*(exponent of p2+1) = 2 * 2 = 4
+
+
+n = L*a[i]^x
+
+
+N = p1^x .....
+
+{n blue balls} {m red balls}
+(n+1)*(m+1)
+
+{d1, d2, d3, d4, ...}
+{d1, d2, d3, d4, ..., d1p, d2p, d3p, d4p, ....}
+{d1, d2, d3, d4, ..., d1p, d2p, d3p, d4p, ...., d1p^2, d2p^2, d3p^2, d4p^2, ....}
+{d1, d2, d3, d4, ..., d1p1, d2p1, d3p1, d4p1, ...., d1p2, d2p2, d3p2, d4p2, ...., d1p1p2, d2p1p2, d3p1p2, d4p1p2}
+Y = p^2
+Y = p1*p2
+N = X*Y
+
+
+-------------------------------------------
+
+N = p1^x * p2^y * p3^z -> O(logN)
+
+Total complexity = O(N^1/3 + Log(N))
+
+sum of divisors = ?
+
+Divisor = p1^(0,1,2..x) * p2^(0,1,2..y) * p3^(0,1,2,..z) * p4^(0,1,2,..a)
+
+a, ar, ar^2, 
+
+Sum of divisors = (1+p1+p1^2+p1^3+....) * (1+p2+p2^2+p2^3+....) * (1+p3+p3^2+p3^3+....) * (1+p4+p4^2+..)
+				= (p1^(x+1) - 1)/(p1-1) * (p2^(y+1)-1)/(p2-1) * (p3^(z+1)-1)/(p3-1) * ()
+
+
+(1/n) % MOD => (n^(MOD-2))%MOD
+
+
+(A^B)%M
+
+A,B,C<=10^6
+
+Find (A^B^C)%M
+
+ans = (B^C)%(M-1)
+
+result = (A^ans)%M
+
+
+A = 5, B = 10
+
+Gcd(A,B) = 5
+
+R = (Ax+By) => divisible by the GCD
+
+There exists some x and some y for which Ax+By = GCD
+
+5*(-1) + 10(1) = 5 (GCD)
+
+Ax1 + Bx2 = R
+
+AR + Bx3 = T => divisible by gcd(x1,x2,x3)
+
+gcd(6,12) = 6
+gcd(3,6) = 3
+gcd(3,2) = 1
+
+Any linear combination of x1,x2,x3,x4...xn will be divisible by
+
+gcd(x1,x2,..xn)
+
+2x-y
+
+x-b
+y-b
+
+2(x-b) - (y-b)
+
+2x - 2b - y + b
+
+(2x - y) - b
